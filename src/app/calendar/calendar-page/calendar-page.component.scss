@@ -1,0 +1,17 @@
+@import "../../../styles.scss";
+
+.container {
+  display: flex;
+  height: $main-page-height;
+  width: auto;
+
+  &__month-calendar {
+    width: 22%;
+    height: 50%;
+  }
+
+  &__week-calendar {
+    width: 78%;
+    height: 100%;
+  }
+}

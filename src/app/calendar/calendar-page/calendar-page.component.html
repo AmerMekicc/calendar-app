@@ -1,0 +1,19 @@
+<div class="container">
+  <app-month-calendar
+    class="container__month-calendar"
+    *ngIf="date$ | async"
+    [day]="(date$ | async)!.day"
+    [month]="(date$ | async)!.month"
+    [year]="(date$ | async)!.year"
+    [appointments]="(appointments$ | async) || []"
+  ></app-month-calendar>
+  <app-week-calendar
+    class="container__week-calendar"
+    *ngIf="date$ | async"
+    [appointments]="(appointments$ | async) || []"
+    [day]="(date$ | async)!.day"
+    [month]="(date$ | async)!.month"
+    [year]="(date$ | async)!.year"
+  ></app-week-calendar>
+  <div></div>
+</div>

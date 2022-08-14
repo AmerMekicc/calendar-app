@@ -1,0 +1,59 @@
+@import "../../../styles.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: $component-bg-color;
+  user-select: none;
+}
+
+.header {
+  display: flex;
+  padding: $control-padding;
+  font-size: $control-font-size;
+  font-weight: $control-font-weight;
+  justify-content: space-between;
+  @include borders();
+  margin-left: -1px;
+  &__controls {
+    &__item {
+      margin-left: $control-icons-margin-left;
+      cursor: pointer;
+    }
+  }
+}
+
+.day-names-grid {
+  display: grid;
+  grid-template-columns: 1fr repeat(7, 2fr);
+  text-align: center;
+  @include borders();
+  margin-top: -1px;
+  margin-left: -1px;
+  &__cell {
+    font-size: $calendar-items-font-size;
+    font-weight: $control-font-weight;
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    &__item {
+      padding: 6px 6px;
+
+      &--before {
+        color: $weekday-font-color;
+      }
+      &--current {
+        color: $active-day-font-color;
+        background-color: $active-day-bg-color;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+.hour-view {
+  height: calc(100vh - 165px);
+}
