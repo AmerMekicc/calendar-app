@@ -4,7 +4,7 @@
       <div class="view-modal__controls-date-time">
         <div class="view-modal__controls-date-time__date">
           <fa-icon [icon]="calendarIcon"></fa-icon>
-          <div>{{ getDate() }}</div>
+          <div>{{ appointmentsOnCurrentDay | headerDate }}</div>
         </div>
         <div class="view-modal__controls-date-time__time">
           <fa-icon [icon]="clockIcon"></fa-icon>
@@ -20,22 +20,30 @@
       </div>
       <div class="view-modal__controls__arrows">
         <fa-icon
-          *ngIf="isTherePrevAppointment()"
+          *ngIf="appointmentsOnCurrentDay.appointments[0].index > 0"
           [icon]="leftArrow"
           (click)="prevAppointment()"
         ></fa-icon>
-        <div *ngIf="!isTherePrevAppointment()"></div>
+        <div *ngIf="appointmentsOnCurrentDay.appointments[0].index === 0"></div>
         <fa-icon
-          *ngIf="isThereNextAppointment()"
+          *ngIf="
+            appointmentsOnCurrentDay.appointments[
+              appointmentsOnCurrentDay.appointments.length - 1
+            ].index !==
+            numberOfAppointments - 1
+          "
           [icon]="rightArrow"
           (click)="nextAppointment()"
         ></fa-icon>
-        <div *ngIf="!isThereNextAppointment()"></div>
+        <div
+          *ngIf="
+            appointmentsOnCurrentDay.appointments[
+              appointmentsOnCurrentDay.appointments.length - 1
+            ].index ===
+            numberOfAppointments - 1
+          "
+        ></div>
       </div>
-    </div>
-
-    <div *ngIf="appointmentsByHotel.length === 0" class="empty-appointments">
-      <p>There are no viewings on current time</p>
     </div>
     <div class="overflow">
       <div class="view-modal__hotels" *ngFor="let hotel of appointmentsByHotel">
@@ -57,16 +65,19 @@
             <div class="list-time">
               <div>
                 <fa-icon [icon]="calendarIcon"></fa-icon>
-                <div>{{ getDateOfAppointment() }}</div>
+                <div>{{ appointment | appointmentDate }}</div>
               </div>
               <div>
                 <fa-icon [icon]="clockIcon"></fa-icon>
-                <div>{{ getTime(appointment) }}</div>
+                <div>{{ appointment | appointmentTime }}</div>
               </div>
             </div>
             <div class="list-user">
               <fa-icon [icon]="userIcon"></fa-icon>
-              <div>{{ getInvitees(appointment) }}</div>
+              <div>
+                {{ appointment.atendeeCount }} |
+                {{ appointment.maxInviteeCount }}
+              </div>
             </div>
           </li>
         </ul>

@@ -22,10 +22,8 @@
         class="day-names-grid__cell"
       >
         <div
-          [class]="
-            'day-names-grid__cell__item day-names-grid__cell__item--' +
-            isBeforeCurrentDate(week[i])
-          "
+          class="day-names-grid__cell__item"
+          [ngClass]="week[i] | checkActiveWeekDay: year:month:day"
         >
           {{ week[i].day + " " + dayName.slice(0, 3) | uppercase }}
         </div>

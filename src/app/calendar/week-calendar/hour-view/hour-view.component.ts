@@ -109,21 +109,4 @@ export class HourViewComponent implements OnInit, OnChanges {
       startHours++;
     }
   }
-
-  public getActiveAppointmentClass(
-    day: number,
-    month: number,
-    year: number,
-    appointments: IAppointment[]
-  ): string {
-    const valueDate = new Date(year, month, day);
-    const currentDate = new Date(this.year, this.month, this.day);
-    if (valueDate.getTime() < currentDate.getTime() && appointments.length) {
-      return 'not-active';
-    } else if (appointments.length) {
-      return 'active';
-    } else {
-      return '';
-    }
-  }
 }

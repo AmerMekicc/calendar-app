@@ -12,7 +12,6 @@ import {
   faClock,
   faUser,
 } from '@fortawesome/free-solid-svg-icons';
-import { monthNames, weekDays } from 'src/assets/calendarAssets';
 import { IAppointment } from 'src/assets/models/appointment';
 import { IHotel } from 'src/assets/models/hotel';
 import { IHour } from 'src/assets/models/hour';
@@ -69,59 +68,11 @@ export class AppointmentsViewComponent implements OnChanges {
       this.appointmentsByHotel.push(tempHotelAppointment);
     });
   }
-
-  public getDate(): string {
-    return `${weekDays[this.appointmentsOnCurrentDay.weekDay]}, ${
-      this.appointmentsOnCurrentDay.day
-    } 
-            ${monthNames[this.appointmentsOnCurrentDay.month]} ${
-      this.appointmentsOnCurrentDay.year
-    }`;
-  }
-
-  public getTime(value: IAppointment): string {
-    const tempMinute =
-      value.date.getMinutes() === 0 ? '00' : value.date.getMinutes();
-    return `${value.date.getHours()}:${tempMinute}`;
-  }
-
-  public getInvitees(value: IAppointment): string {
-    return `${value.atendeeCount} | ${value.maxInviteeCount}`;
-  }
-
-  public getDateOfAppointment(): string {
-    return `${this.appointmentsOnCurrentDay.day} ${
-      monthNames[this.appointmentsOnCurrentDay.month]
-    } 
-            ${this.appointmentsOnCurrentDay.year}`;
-  }
-
   public nextAppointment(): void {
     this.nextAppointmentEmitter.emit(this.appointmentsOnCurrentDay);
   }
 
   public prevAppointment(): void {
     this.prevAppointmentEmitter.emit(this.appointmentsOnCurrentDay);
-  }
-
-  isTherePrevAppointment(): boolean {
-    if (this.appointmentsOnCurrentDay.appointments[0].index === 0) {
-      return false;
-    } else {
-      return true;
-    }
-  }
-
-  isThereNextAppointment(): boolean {
-    if (
-      this.appointmentsOnCurrentDay.appointments[
-        this.appointmentsOnCurrentDay.appointments.length - 1
-      ].index ===
-      this.numberOfAppointments - 1
-    ) {
-      return false;
-    } else {
-      return true;
-    }
   }
 }

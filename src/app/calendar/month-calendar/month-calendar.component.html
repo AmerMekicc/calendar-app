@@ -29,20 +29,16 @@
       <div
         (click)="handleDayClick(days)"
         *ngFor="let days of daysInMonth"
-        [class]="
-          'days-number-grid__cell days-number-grid__cell--' +
-          checkActiveWeek(days)
-        "
+        class="days-number-grid__cell"
+        [ngClass]="days | checkActiveWeek: year:month:day"
       >
         <div
-          [class]="
-            'days-number-grid__cell__item days-number-grid__cell__item--' +
-            checkActiveDayAndMonth(days)
-          "
+          class="days-number-grid__cell__item"
+          [ngClass]="days | checkActiveDayMonth: month:day"
         >
           {{ days.day }}
         </div>
-        <div [class]="checkForAppointment(days)"></div>
+        <div [ngClass]="days | monthCalendarAppointment: appointments"></div>
       </div>
     </div>
   </div>

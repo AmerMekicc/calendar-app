@@ -1,7 +1,7 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { Store } from '@ngrx/store';
-import { getDay, getDaysInMonth, getWeek } from 'date-fns';
+import { getDay, getDaysInMonth } from 'date-fns';
 import {
   getNextMonth,
   getPrevMonth,
@@ -114,16 +114,6 @@ export class MonthCalendarComponent implements OnInit, OnChanges {
 
   public handleDayClick(date: IDay): void {
     this.store.dispatch(setDate({ date: { ...date } }));
-  }
-
-  public checkActiveWeek(date: IDay): string {
-    const currentDayWeek = getWeek(new Date(this.year, this.month, this.day));
-    const checkedDayWeek = getWeek(new Date(date.year, date.month, date.day));
-    if (currentDayWeek === checkedDayWeek) {
-      return 'active-week';
-    } else {
-      return '';
-    }
   }
 
   public checkActiveDayAndMonth(date: IDay): string {

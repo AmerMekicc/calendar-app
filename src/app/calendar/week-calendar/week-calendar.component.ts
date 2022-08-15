@@ -178,20 +178,6 @@ export class WeekCalendarComponent implements OnInit, OnChanges {
     return filteredArray;
   }
 
-  public isBeforeCurrentDate(date: IDay): string {
-    if (
-      (date.day < this.day && date.month === this.month) ||
-      date.month < this.month ||
-      date.year < this.year
-    ) {
-      return 'before';
-    } else if (date.day === this.day) {
-      return 'current';
-    } else {
-      return '';
-    }
-  }
-
   public getNextAppointment(value: IHour): void {
     let indexOfLastWeekAppointment = this.appointments.length;
     let indexOfNextAppointment = 0;

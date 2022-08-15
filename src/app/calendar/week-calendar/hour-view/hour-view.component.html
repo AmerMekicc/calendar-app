@@ -1,14 +1,7 @@
 <div class="grid-container" *ngIf="hours.length !== 0">
   <div
-    [class]="
-      'grid-cells grid-cells--' +
-      getActiveAppointmentClass(
-        hour.day,
-        hour.month,
-        hour.year,
-        hour.appointments
-      )
-    "
+    class="grid-cells grid-cells--"
+    [ngClass]="hour | checkActiveAppointment: hour.appointments"
     *ngFor="let hour of hours"
   >
     <div *ngIf="hour.name !== ''" class="grid-cells__item">{{ hour.name }}</div>

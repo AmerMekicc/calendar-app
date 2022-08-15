@@ -13,6 +13,14 @@ import { appointmentsReducer } from './appointments/appointments-store/appointme
 import { AppointmentEffects } from './appointments/appointments-store/appointments.effects';
 import { HourViewComponent } from './calendar/week-calendar/hour-view/hour-view.component';
 import { AppointmentsViewComponent } from './appointments/appointments-view/appointments-view.component';
+import { AppointmentDatePipe } from './pipes/appointment-date.pipe';
+import { AppointmentTimePipe } from './pipes/appointment-time.pipe';
+import { HeaderDatePipe } from './pipes/header-date.pipe';
+import { MonthCalendarAppointmentPipe } from './pipes/month-calendar-appointment.pipe';
+import { CheckActiveWeekPipe } from './pipes/check-active-week.pipe';
+import { CheckActiveDayMonthPipe } from './pipes/check-active-day-month.pipe';
+import { CheckActiveAppointmentPipe } from './pipes/check-active-appointment.pipe';
+import { CheckActiveWeekDayPipe } from './pipes/check-active-week-day.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +30,14 @@ import { AppointmentsViewComponent } from './appointments/appointments-view/appo
     WeekCalendarComponent,
     HourViewComponent,
     AppointmentsViewComponent,
+    AppointmentDatePipe,
+    AppointmentTimePipe,
+    HeaderDatePipe,
+    MonthCalendarAppointmentPipe,
+    CheckActiveWeekPipe,
+    CheckActiveDayMonthPipe,
+    CheckActiveAppointmentPipe,
+    CheckActiveWeekDayPipe,
   ],
   imports: [
     BrowserModule,
