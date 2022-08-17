@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="header">
+    <div class="header__title">{{ headerString }}</div>
+    <div class="header__controls">
+      <fa-icon
+        (click)="handlePrevWeek()"
+        [icon]="leftArrowIcon"
+        class="header__controls__item"
+      ></fa-icon>
+      <fa-icon
+        (click)="handleNextWeek()"
+        [icon]="rightArrowIcon"
+        class="header__controls__item"
+      ></fa-icon>
+    </div>
+  </div>
+  <div class="grid-container">
+    <div class="day-names-grid">
+      <div></div>
+      <div
+        *ngFor="let dayName of weekDays; let i = index"
+        class="day-names-grid__cell"
+      >
+        <div
+          class="day-names-grid__cell__item"
+          [ngClass]="week[i] | checkActiveWeekDay: year:month:day"
+        >
+          {{ week[i].day + " " + dayName.slice(0, 3) | uppercase }}
+        </div>
+      </div>
+    </div>
+    <app-hour-view
+      (prevAppointmentEmitter)="getPrevAppointment($event)"
+      (nextAppointmentEmitter)="getNextAppointment($event)"
+      class="hour-view"
+      [week]="week"
+      [weekAppointments]="weekAppointments"
+      [numberOfAppointments]="appointments.length"
+      [day]="day"
+      [month]="month"
+      [year]="year"
+      [clickedAppointment]="clickedAppointment"
+    ></app-hour-view>
+  </div>
+</div>

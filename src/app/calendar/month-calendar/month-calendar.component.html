@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="header">
+    <div class="header__title">
+      {{ monthNames[month] + " " + year }}
+    </div>
+    <div class="header__controls">
+      <fa-icon
+        (click)="handlePrevMonth()"
+        [icon]="arrowLeftIcon"
+        class="header__controls__item"
+      ></fa-icon>
+      <fa-icon
+        (click)="handleNextMonth()"
+        [icon]="arrowRightIcon"
+        class="header__controls__item"
+      ></fa-icon>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="day-names-grid">
+      <div
+        *ngFor="let weekDay of weekDayNames"
+        [class]="weekDay[0] === 'S' ? 'weekday' : ''"
+      >
+        {{ weekDay[0] }}
+      </div>
+    </div>
+    <div class="days-number-grid">
+      <div
+        (click)="handleDayClick(days)"
+        *ngFor="let days of daysInMonth"
+        class="days-number-grid__cell"
+        [ngClass]="days | checkActiveWeek: year:month:day"
+      >
+        <div
+          class="days-number-grid__cell__item"
+          [ngClass]="days | checkActiveDayMonth: month:day"
+        >
+          {{ days.day }}
+        </div>
+        <div [ngClass]="days | monthCalendarAppointment: appointments"></div>
+      </div>
+    </div>
+  </div>
+</div>

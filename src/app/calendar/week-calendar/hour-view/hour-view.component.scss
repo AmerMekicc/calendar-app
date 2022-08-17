@@ -1,0 +1,60 @@
+@import "../../../../styles.scss";
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr repeat(7, 2fr);
+  border-right: 1px solid $border-color;
+  margin-left: -1px;
+  height: calc(100vh - 165px);
+  overflow: scroll;
+  background-color: $component-bg-color;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.grid-cells {
+  border-left: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+  height: 125px;
+  font-size: $hour-item-font-size;
+  padding: $hour-view-padding;
+
+  &--active {
+    background-color: $hour-item-active-bg-color;
+    color: $hour-item-active-font-color;
+    cursor: pointer;
+  }
+
+  &--not-active {
+    background-color: $hour-item-non-active-bg-color;
+    cursor: pointer;
+  }
+
+  &__item {
+    height: 100%;
+
+    & div {
+      font-weight: $hour-item-font-weight;
+      font-size: $hour-item-font-size;
+    }
+  }
+}
+
+.modal-popup {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: $popup-bg-color;
+
+  &__item {
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,451 @@
+{
+  "data": {
+    "appointments": {
+      "nodes": [
+        {
+          "id": "2442449",
+          "date": "2022-08-16T10:00:00.000+0000",
+          "maxInviteeCount": 3,
+          "attendeeCount": 2,
+          "showContactInformation": false,
+          "contact": {
+            "firstName": "",
+            "name": "",
+            "email": "",
+            "mobile": "",
+            "phone": "",
+            "address": {},
+            "fullName": ""
+          },
+          "property": {
+            "id": "2442379",
+            "name": "2 Zimmer in Stendal",
+            "inviteeCount": 2,
+            "address": {
+              "street": "Karlhagenbeckstr",
+              "houseNumber": "31",
+              "city": "Stendal",
+              "country": "DE",
+              "zipCode": "39576",
+              "__typename": "Address"
+            },
+            "attachments": [],
+            "user": {
+              "profile": {
+                "firstname": "Max",
+                "name": "Mustermann",
+                "phone": "",
+                "gender": "NA",
+                "title": "NONE"
+              },
+              "usertype": "COMPANYADMIN",
+              "__typename": "LandlordUser"
+            },
+            "__typename": "Property"
+          },
+          "__typename": "Appointment"
+        },
+        {
+          "id": "2442150",
+          "date": "2022-08-16T10:30:00.000+0000",
+          "maxInviteeCount": 2,
+          "attendeeCount": 1,
+          "showContactInformation": false,
+          "contact": {
+            "firstName": "",
+            "name": "",
+            "email": "",
+            "mobile": "",
+            "phone": "",
+            "address": {},
+            "fullName": ""
+          },
+          "property": {
+            "id": "2440848",
+            "name": "Test",
+            "inviteeCount": 1,
+            "address": {
+              "street": "Lazarettstr.",
+              "houseNumber": "3",
+              "city": "München",
+              "country": "DE",
+              "zipCode": "80636",
+              "__typename": "Address"
+            },
+            "attachments": [],
+            "user": {
+              "profile": {
+                "firstname": "Max",
+                "name": "Mustermann",
+                "phone": "",
+                "gender": "NA",
+                "title": "NONE"
+              },
+              "usertype": "COMPANYADMIN",
+              "__typename": "LandlordUser"
+            },
+            "__typename": "Property"
+          },
+          "__typename": "Appointment"
+        },
+        {
+          "id": "2442901",
+          "date": "2022-08-16T10:00:00.000+0000",
+          "maxInviteeCount": 3,
+          "attendeeCount": 1,
+          "showContactInformation": false,
+          "contact": {
+            "firstName": "",
+            "name": "",
+            "email": "",
+            "mobile": "",
+            "phone": "",
+            "address": {},
+            "fullName": ""
+          },
+          "property": {
+            "id": "2440850",
+            "name": "Flat ohne name",
+            "inviteeCount": 1,
+            "address": {
+              "street": "Lazarettstr.",
+              "houseNumber": "3",
+              "city": "München",
+              "country": "DE",
+              "zipCode": "80636",
+              "__typename": "Address"
+            },
+            "attachments": [],
+            "user": {
+              "profile": {
+                "firstname": "Max",
+                "name": "Mustermann",
+                "phone": "",
+                "gender": "NA",
+                "title": "NONE"
+              },
+              "usertype": "COMPANYADMIN",
+              "__typename": "LandlordUser"
+            },
+            "__typename": "Property"
+          },
+          "__typename": "Appointment"
+        },
+        {
+          "id": "24424112",
+          "date": "2022-08-16T10:15:00.000+0000",
+          "maxInviteeCount": 3,
+          "attendeeCount": 2,
+          "showContactInformation": false,
+          "contact": {
+            "firstName": "",
+            "name": "",
+            "email": "",
+            "mobile": "",
+            "phone": "",
+            "address": {},
+            "fullName": ""
+          },
+          "property": {
+            "id": "2442379",
+            "name": "Test 2",
+            "inviteeCount": 2,
+            "address": {
+              "street": "Karlhagenbeckstr",
+              "houseNumber": "31",
+              "city": "Stendal",
+              "country": "DE",
+              "zipCode": "39576",
+              "__typename": "Address"
+            },
+            "attachments": [],
+            "user": {
+              "profile": {
+                "firstname": "Max",
+                "name": "Mustermann",
+                "phone": "",
+                "gender": "NA",
+                "title": "NONE"
+              },
+              "usertype": "COMPANYADMIN",
+              "__typename": "LandlordUser"
+            },
+            "__typename": "Property"
+          },
+          "__typename": "Appointment"
+        },
+        {
+          "id": "2422114",
+          "date": "2022-08-15T09:00:00.000+0000",
+          "maxInviteeCount": 3,
+          "attendeeCount": 2,
+          "showContactInformation": false,
+          "contact": {
+            "firstName": "",
+            "name": "",
+            "email": "",
+            "mobile": "",
+            "phone": "",
+            "address": {},
+            "fullName": ""
+          },
+          "property": {
+            "id": "2445512",
+            "name": "Test 3",
+            "inviteeCount": 2,
+            "address": {
+              "street": "Karlhagenbeckstr",
+              "houseNumber": "31",
+              "city": "Stendal",
+              "country": "DE",
+              "zipCode": "39576",
+              "__typename": "Address"
+            },
+            "attachments": [],
+            "user": {
+              "profile": {
+                "firstname": "Max",
+                "name": "Mustermann",
+                "phone": "",
+                "gender": "NA",
+                "title": "NONE"
+              },
+              "usertype": "COMPANYADMIN",
+              "__typename": "LandlordUser"
+            },
+            "__typename": "Property"
+          },
+          "__typename": "Appointment"
+        },
+        {
+          "id": "2442121",
+          "date": "2022-08-15T08:00:00.000+0000",
+          "maxInviteeCount": 3,
+          "attendeeCount": 2,
+          "showContactInformation": false,
+          "contact": {
+            "firstName": "",
+            "name": "",
+            "email": "",
+            "mobile": "",
+            "phone": "",
+            "address": {},
+            "fullName": ""
+          },
+          "property": {
+            "id": "244551",
+            "name": "Test 4",
+            "inviteeCount": 2,
+            "address": {
+              "street": "Karlhagenbeckstr",
+              "houseNumber": "31",
+              "city": "Stendal",
+              "country": "DE",
+              "zipCode": "39576",
+              "__typename": "Address"
+            },
+            "attachments": [],
+            "user": {
+              "profile": {
+                "firstname": "Max",
+                "name": "Mustermann",
+                "phone": "",
+                "gender": "NA",
+                "title": "NONE"
+              },
+              "usertype": "COMPANYADMIN",
+              "__typename": "LandlordUser"
+            },
+            "__typename": "Property"
+          },
+          "__typename": "Appointment"
+        },
+        {
+          "id": "2442121234",
+          "date": "2022-08-22T07:00:00.000+0000",
+          "maxInviteeCount": 3,
+          "attendeeCount": 2,
+          "showContactInformation": false,
+          "contact": {
+            "firstName": "",
+            "name": "",
+            "email": "",
+            "mobile": "",
+            "phone": "",
+            "address": {},
+            "fullName": ""
+          },
+          "property": {
+            "id": "24455111",
+            "name": "Test 5",
+            "inviteeCount": 2,
+            "address": {
+              "street": "Karlhagenbeckstr",
+              "houseNumber": "31",
+              "city": "Stendal",
+              "country": "DE",
+              "zipCode": "39576",
+              "__typename": "Address"
+            },
+            "attachments": [],
+            "user": {
+              "profile": {
+                "firstname": "Max",
+                "name": "Mustermann",
+                "phone": "",
+                "gender": "NA",
+                "title": "NONE"
+              },
+              "usertype": "COMPANYADMIN",
+              "__typename": "LandlordUser"
+            },
+            "__typename": "Property"
+          },
+          "__typename": "Appointment"
+        },
+        {
+          "id": "2442121233",
+          "date": "2022-08-14T07:00:00.000+0000",
+          "maxInviteeCount": 3,
+          "attendeeCount": 2,
+          "showContactInformation": false,
+          "contact": {
+            "firstName": "",
+            "name": "",
+            "email": "",
+            "mobile": "",
+            "phone": "",
+            "address": {},
+            "fullName": ""
+          },
+          "property": {
+            "id": "24455111",
+            "name": "Test 6",
+            "inviteeCount": 2,
+            "address": {
+              "street": "Karlhagenbeckstr",
+              "houseNumber": "31",
+              "city": "Stendal",
+              "country": "DE",
+              "zipCode": "39576",
+              "__typename": "Address"
+            },
+            "attachments": [],
+            "user": {
+              "profile": {
+                "firstname": "Max",
+                "name": "Mustermann",
+                "phone": "",
+                "gender": "NA",
+                "title": "NONE"
+              },
+              "usertype": "COMPANYADMIN",
+              "__typename": "LandlordUser"
+            },
+            "__typename": "Property"
+          },
+          "__typename": "Appointment"
+        },
+        {
+          "id": "24425521",
+          "date": "2022-08-17T08:00:00.000+0000",
+          "maxInviteeCount": 3,
+          "attendeeCount": 2,
+          "showContactInformation": false,
+          "contact": {
+            "firstName": "",
+            "name": "",
+            "email": "",
+            "mobile": "",
+            "phone": "",
+            "address": {},
+            "fullName": ""
+          },
+          "property": {
+            "id": "24455111",
+            "name": "Test 7",
+            "inviteeCount": 2,
+            "address": {
+              "street": "Karlhagenbeckstr",
+              "houseNumber": "31",
+              "city": "Stendal",
+              "country": "DE",
+              "zipCode": "39576",
+              "__typename": "Address"
+            },
+            "attachments": [],
+            "user": {
+              "profile": {
+                "firstname": "Max",
+                "name": "Mustermann",
+                "phone": "",
+                "gender": "NA",
+                "title": "NONE"
+              },
+              "usertype": "COMPANYADMIN",
+              "__typename": "LandlordUser"
+            },
+            "__typename": "Property"
+          },
+          "__typename": "Appointment"
+        },
+        {
+          "id": "244212121",
+          "date": "2022-08-14T10:00:00.000+0000",
+          "maxInviteeCount": 3,
+          "attendeeCount": 2,
+          "showContactInformation": false,
+          "contact": {
+            "firstName": "",
+            "name": "",
+            "email": "",
+            "mobile": "",
+            "phone": "",
+            "address": {},
+            "fullName": ""
+          },
+          "property": {
+            "id": "24455111",
+            "name": "Test 8",
+            "inviteeCount": 2,
+            "address": {
+              "street": "Karlhagenbeckstr",
+              "houseNumber": "31",
+              "city": "Stendal",
+              "country": "DE",
+              "zipCode": "39576",
+              "__typename": "Address"
+            },
+            "attachments": [],
+            "user": {
+              "profile": {
+                "firstname": "Max",
+                "name": "Mustermann",
+                "phone": "",
+                "gender": "NA",
+                "title": "NONE"
+              },
+              "usertype": "COMPANYADMIN",
+              "__typename": "LandlordUser"
+            },
+            "__typename": "Property"
+          },
+          "__typename": "Appointment"
+        }
+      ],
+      "page": {
+        "cursor": "0",
+        "hasNext": true,
+        "hasPrev": false,
+        "next": 1,
+        "page": 0,
+        "prev": 0,
+        "size": 100,
+        "totalElements": 3,
+        "totalPages": 1,
+        "__typename": "Pagination"
+      },
+      "__typename": "Appointments"
+    }
+  }
+}

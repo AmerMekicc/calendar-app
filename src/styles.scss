@@ -1,1 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Mukta:wght@200&display=swap");
+
+$font: Montserrat;
+$font-weight: 300;
+
+$main-page-bg-color: #e7e7e7;
+$component-bg-color: white;
+$border-color: #b7b7b7;
+$font-color: black;
+$active-day-font-color: white;
+$active-day-bg-color: #709bff;
+$active-week-bg-color: #ebebeb;
+$weekday-font-color: rgb(176, 176, 176);
+$view-modal-bg-color: #e7e7e7;
+$view-modal-item-bg-color: white;
+$popup-bg-color: rgba(0, 0, 0, 0.694);
+$active-appointment-bg-color: #709bff;
+$not-active-appointment-bg-color: #b7b7b7;
+
+$border-line: 1px;
+$border-radius: 5px;
+$hour-view-padding: 8px 0 0 8px;
+$main-page-margin: 30px;
+
+$main-page-width: calc(100vw - $main-page-margin * 2 - $border-line * 2);
+$main-page-height: calc(100vh - $main-page-margin * 2 - $border-line * 2);
+
+$control-font-size: 18px;
+$control-padding: 20px;
+$control-icons-margin-left: 15px;
+$control-font-weight: 500;
+
+$hour-item-non-active-bg-color: #e7e7e7;
+$hour-item-active-bg-color: #272e3f;
+$hour-item-active-font-color: white;
+$hour-item-font-size: 13px;
+$hour-item-font-weight: 700;
+
+$calendar-items-font-size: 13px;
+
+$view-modal-hotel-margin: 0px 22px 15px 22px;
+$view-modal-hotel-appointment-margin: 10px;
+$hotel-name-font-size: 15px;
+
+$appointment-item-margin-right: 10px;
+$appointment-icons-bg-color: #709bff;
+
+@mixin borders() {
+  border: $border-line solid $border-color;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: $font;
+  font-weight: $font-weight;
+  padding: 0;
+  margin: $main-page-margin;
+  background-color: $main-page-bg-color;
+}

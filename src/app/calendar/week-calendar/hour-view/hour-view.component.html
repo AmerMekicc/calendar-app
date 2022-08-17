@@ -1,0 +1,35 @@
+<div class="grid-container" *ngIf="hours.length !== 0">
+  <div
+    class="grid-cells grid-cells--"
+    [ngClass]="hour | checkActiveAppointment: hour.appointments"
+    *ngFor="let hour of hours"
+  >
+    <div *ngIf="hour.name !== ''" class="grid-cells__item">{{ hour.name }}</div>
+    <div
+      (click)="handleClickedDate(hour)"
+      *ngIf="hour.name === ''"
+      class="grid-cells__item"
+    >
+      <div *ngIf="hour.appointments.length === 1">
+        {{ hour.appointments.length + " Viewing" | uppercase }}
+      </div>
+      <div *ngIf="hour.appointments.length && hour.appointments.length !== 1">
+        {{ hour.appointments.length + " Viewings" | uppercase }}
+      </div>
+    </div>
+  </div>
+  <div
+    class="modal-popup"
+    (click)="handlePopupClose($event, modalDiv)"
+    *ngIf="showAppointmentPopup"
+    #modalDiv
+  >
+    <app-appointments-view
+      class="modal-popup__item"
+      (nextAppointmentEmitter)="nextAppointmentEmitterEvent($event)"
+      (prevAppointmentEmitter)="prevAppointmentEmitterEvent($event)"
+      [appointmentsOnCurrentDay]="clickedAppointment"
+      [numberOfAppointments]="numberOfAppointments"
+    ></app-appointments-view>
+  </div>
+</div>
